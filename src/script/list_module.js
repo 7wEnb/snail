@@ -11,7 +11,7 @@ define(['pagination', 'jlazyload'], function() {
             (function() {
                 const $render = $('.sale_allitems')
                 $.ajax({
-                        url: 'http://192.168.13.43/Snail/php/list.php',
+                        url: 'http://192.168.13.28/Snail/php/list.php',
                         dataType: 'json'
                     })
                     .done(function(data) {
@@ -62,7 +62,7 @@ define(['pagination', 'jlazyload'], function() {
                 callback: function(api) {
                     const $render = $('.sale_allitems')
                     $.ajax({
-                            url: 'http://192.168.13.43/Snail/php/list.php',
+                            url: 'http://192.168.13.28/Snail/php/list.php',
                             dataType: 'json',
                             data: {
                                 page: api.getCurrent() //传输页面

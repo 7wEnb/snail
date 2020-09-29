@@ -13,4 +13,4 @@ for($i=0;$i<$res->num_rows;$i++){
   $arr[$i]=$res->fetch_assoc();
 }
 echo json_encode($arr);
-//http://192.168.13.43/Snail/php/snail.php
+// http://192.168.13.28/Snail/php/snail.php

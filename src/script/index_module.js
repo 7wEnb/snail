@@ -5,7 +5,7 @@ define([], function() {
             (function() {
                 const $render = $('.wnsjk_right')
                 $.ajax({
-                        url: 'http://192.168.13.43/Snail/php/snail.php',
+                        url: 'http://192.168.13.28/Snail/php/snail.php',
                         dataType: 'json'
                     })
                     .done(function(data) {
