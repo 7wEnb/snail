@@ -1,0 +1,153 @@
+@charset "utf-8";
+$bigwidth:100%;
+$mainwidth:1200px; //主内容宽
+$l-s:list-style; //去除列表符号
+$n:none;
+$b:block;
+$f:flex; //设置弹性盒
+$t-d:text-decoration; //去除a标签下划线
+$j-c:justify-content; //主轴的对齐方式
+$a-i:align-items; //侧轴的对齐方式
+$a-c:align-content; //行与行的排列方式
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin background-color ($value) {
+    background-color: $value;
+}
+
+@mixin borderstyle($style, $size, $color) {
+    border: $style $size $color;
+} //设置边框样式
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+} //定位左上
+@mixin positionright($value, $right, $bottom) {
+    position: $value;
+    right: $right;
+    bottom: $bottom;
+} //定位右下
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+// 蜗牛手机卡
+.wnsjk {
+    width: $bigwidth;
+    height: 479.6px;
+    @include background-color(#f7f7f7);
+    // 蜗牛手机卡主部分
+    .main_wnsjk {
+        width: $mainwidth;
+        height: 479.6px;
+        padding-top: 30px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        font-size: 100%;
+        @include background-color(#f7f7f7);
+        // 蜗牛手机卡标题
+        .wnsjk_title {
+            height: 29.6px;
+            margin-bottom: 20px;
+            h1 {
+                font-size: 20px;
+                color: #303030;
+                float: left;
+                @include display($b);
+            }
+            .onemore {
+                float: right;
+                font-size: 14px;
+                color: #999;
+                padding-right: 29px;
+                position: relative;
+                line-height: 30px;
+                #{$t-d}: $n;
+                span {
+                    width: 19px;
+                    height: 11px;
+                    background: url(../img/图片3.png);
+                    background-position: 0 0;
+                    position: absolute;
+                    top: 9px;
+                    right: 0;
+                }
+            }
+            .onemore:hover {
+                color: #ff9500;
+            }
+        }
+        // 蜗牛手机卡左
+        .wnsjk_left {
+            width: 227px;
+            height: 360px;
+            border: $n;
+            float: left;
+            margin-right: 16px;
+            @include display(inline);
+            img {
+                font-size: 100%;
+                cursor: pointer;
+            }
+        }
+        // 蜗牛手机卡右
+        .wnsjk_right {
+            width: 957px;
+            height: 360px;
+            float: left;
+            .wn_simcard:nth-of-type(4) {
+                margin-right: 0;
+            }
+            .wn_simcard {
+                width: 225px;
+                height: 358px;
+                float: left;
+                margin-right: 16px;
+                @include borderstyle(1px, solid, #fff);
+                @include background-color(#fff);
+                .simcard_name {
+                    font-size: 16px;
+                    color: #333;
+                    text-align: left;
+                    margin: 30px 0 8px 30px;
+                    line-height: 1;
+                }
+                .simcard_intro {
+                    font-size: 14px;
+                    color: #999;
+                    line-height: 1;
+                    text-align: left;
+                    margin: 0 0 8px 30px;
+                }
+                .simcard_price {
+                    font-size: 14px;
+                    color: #f86a00;
+                    text-align: left;
+                    line-height: 1;
+                    margin: 0 0 60px 30px;
+                }
+                .simcard_img {
+                    width: 227px;
+                    height: 190px;
+                    text-align: center;
+                    img {
+                        width: 197px;
+                        height: 190px;
+                    }
+                }
+            }
+            .wn_simcard:hover {
+                border-color: #ff9500;
+                cursor: pointer;
+            }
+        }
+    }
+}

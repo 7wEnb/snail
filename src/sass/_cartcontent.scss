@@ -1,0 +1,60 @@
+@charset "utf-8";
+$bigwidth:100%;
+$mainwidth:1200px; //主内容宽
+$l-s:list-style; //去除列表符号
+$n:none;
+$b:block;
+$f:flex; //设置弹性盒
+$t-d:text-decoration; //去除a标签下划线
+$j-c:justify-content; //主轴的对齐方式
+$a-i:align-items; //侧轴的对齐方式
+$a-c:align-content; //行与行的排列方式
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin background-color ($value) {
+    background-color: $value;
+}
+
+@mixin borderstyle($style, $size, $color) {
+    border: $style $size $color;
+} //设置边框样式
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+} //定位左上
+@mixin positionright($value, $right, $bottom) {
+    position: $value;
+    right: $right;
+    bottom: $bottom;
+} //定位右下
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+// 购物车top
+.header {
+    .topnav {
+        .main_topnav {
+            .logo {
+                height: 100px;
+                font-size: 24px;
+                line-height: 100px;
+                @include display(inline-block);
+                text-align: center;
+                color: orangered;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+// 购物车结算
+// .cart {}

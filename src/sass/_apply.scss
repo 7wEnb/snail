@@ -1,0 +1,224 @@
+@charset "utf-8";
+// $bigwidth:100%;
+// $mainwidth:1200px; //主内容宽
+// $l-s:list-style; //去除列表符号
+// $n:none;
+// $b:block;
+// $f:flex; //设置弹性盒
+// $t-d:text-decoration; //去除a标签下划线
+// $j-c:justify-content; //主轴的对齐方式
+// $a-i:align-items; //侧轴的对齐方式
+// $a-c:align-content; //行与行的排列方式
+// @mixin display($value) {
+//     display: $value;
+// }
+// @mixin background-color ($value) {
+//     background-color: $value;
+// }
+// @mixin borderstyle($style, $size, $color) {
+//     border: $style $size $color;
+// } //设置边框样式
+// @mixin positionleft($value, $left, $top) {
+//     position: $value;
+//     left: $left;
+//     top: $top;
+// } //定位左上
+// @mixin positionright($value, $right, $bottom) {
+//     position: $value;
+//     right: $right;
+//     bottom: $bottom;
+// } //定位右下
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+// html {
+//     position: relative;
+// }
+// 应用
+.apply {
+    width: $bigwidth;
+    height: 540px;
+    @include background-color(#f7f7f7);
+    //应用主部分
+    .main_apply {
+        width: $mainwidth;
+        height: 500px;
+        margin: 0 auto;
+        @include background-color(#f7f7f7);
+        padding-bottom: 40px;
+        //应用标题
+        .apply_title {
+            margin-bottom: 20px;
+            h1 {
+                font-size: 20px;
+                color: #303030;
+            }
+        }
+    }
+    //应用分布
+    .distribution {
+        margin-top: 16px;
+        position: relative;
+        // aap盒子
+        .app_box {
+            width: 280px;
+            height: 420px;
+            float: left;
+            margin-right: 26px;
+            @include background-color(#fff);
+            text-align: center;
+            border-top: 1px solid #daae63;
+            cursor: pointer;
+            h2 {
+                font-size: 18px;
+                color: #ff9500;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            h3 {
+                width: 280px;
+                font-size: 22px;
+                text-align: center;
+            }
+            h4 {
+                font-size: 12px;
+                color: #999;
+            }
+            .shield {
+                margin-top: 50px;
+                @include display(inline-block);
+            }
+            .round {
+                @include background-color(#fff);
+                @include display($b);
+                width: 9px;
+                height: 9px;
+                margin: 30px auto;
+                @include borderstyle(2px, solid, #ff9500);
+                border-radius: 50%;
+            }
+        }
+        // game盒子
+        .game_box {
+            width: 280px;
+            height: 420px;
+            float: left;
+            margin-right: 26px;
+            @include background-color(#fff);
+            text-align: center;
+            cursor: pointer;
+            border-top: 1px solid #8fb578;
+            h2 {
+                font-size: 18px;
+                color: #ff9500;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            h3 {
+                width: 280px;
+                font-size: 22px;
+                text-align: center;
+            }
+            h4 {
+                font-size: 12px;
+                color: #999;
+            }
+            .games {
+                margin-top: 50px;
+                @include display(inline-block);
+            }
+            .round {
+                @include background-color(#fff);
+                @include display($b);
+                width: 9px;
+                height: 9px;
+                margin: 30px auto;
+                @include borderstyle(2px, solid, #ff9500);
+                border-radius: 50%;
+            }
+        }
+        // VR盒子
+        .vr_box {
+            width: 280px;
+            height: 420px;
+            float: left;
+            margin-right: 26px;
+            @include background-color(#fff);
+            text-align: center;
+            cursor: pointer;
+            border-top: 1px solid #aa5251;
+            h2 {
+                font-size: 18px;
+                color: #ff9500;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            h3 {
+                width: 280px;
+                font-size: 22px;
+                text-align: center;
+            }
+            h4 {
+                font-size: 12px;
+                color: #999;
+            }
+            .vrs {
+                margin-top: 50px;
+                @include display(inline-block);
+            }
+            .round {
+                @include background-color(#fff);
+                @include display($b);
+                width: 9px;
+                height: 9px;
+                margin: 30px auto;
+                @include borderstyle(2px, solid, #ff9500);
+                border-radius: 50%;
+            }
+        }
+        // 社区盒子
+        .community_box {
+            width: 280px;
+            height: 420px;
+            float: left;
+            margin-right: 2px;
+            @include background-color(#fff);
+            text-align: center;
+            cursor: pointer;
+            border-top: 1px solid #4e8bba;
+            h2 {
+                font-size: 18px;
+                color: #ff9500;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 15px;
+            }
+            h3 {
+                width: 280px;
+                font-size: 22px;
+                text-align: center;
+            }
+            h4 {
+                font-size: 12px;
+                color: #999;
+            }
+            .communitys {
+                margin-top: 50px;
+                @include display(inline-block);
+            }
+            .round {
+                @include background-color(#fff);
+                @include display($b);
+                width: 9px;
+                height: 9px;
+                margin: 30px auto;
+                @include borderstyle(2px, solid, #ff9500);
+                border-radius: 50%;
+            }
+        }
+    }
+}

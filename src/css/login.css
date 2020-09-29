@@ -1,0 +1,196 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+}
+
+.mask {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background: #000;
+  opacity: 0.5;
+}
+
+.login {
+  width: 704px;
+  height: 400px;
+  margin-left: -352px;
+  font-family: 微软雅黑;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-top: -200px;
+}
+.login .abg {
+  width: 100%;
+  height: 8px;
+  background: #000;
+  opacity: 0.3;
+  overflow: hidden;
+  border: 0 none;
+}
+.login .login_contain {
+  height: 384px;
+  position: relative;
+}
+.login .login_contain .vbg {
+  height: 100%;
+  width: 8px;
+  background: #000;
+  opacity: 0.3;
+}
+.login .login_contain .vbgflr {
+  height: 100%;
+  width: 8px;
+  background: #000;
+  opacity: 0.3;
+  float: right;
+}
+.login .login_contain .close {
+  width: 20px;
+  height: 20px;
+  background: url(https://sso.woniu.com/images/login/close.gif) no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  z-index: 99999;
+}
+.login .login_contain .content {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.login .login_contain .content .l_p {
+  width: 280px;
+  float: left;
+  margin-top: 48px;
+  margin-left: 20px;
+}
+.login .login_contain .content .l_p .l_p_p {
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+}
+.login .login_contain .content .l_p .qrcode {
+  width: 132px;
+  position: relative;
+  border: 1px solid #dedede;
+  margin: 38px auto 18px;
+  font-size: 0;
+}
+.login .login_contain .content .l_p .qrcode .qrcode_img {
+  width: 132px;
+  height: 132px;
+}
+.login .login_contain .content .l_p .l_p_p_bg1 {
+  height: 30px;
+  line-height: 30px;
+  color: #666;
+  background: url(https://sso.woniu.com/images/login/rect.gif) no-repeat center center;
+  font-size: 14px;
+  text-align: center;
+}
+.login .login_contain .content .l_p .l_p_b {
+  font-size: 14px;
+  color: #999;
+  margin-top: 56px;
+}
+.login .login_contain .content .l_p .l_p_b .org_link {
+  color: #ff860d;
+  text-decoration: none;
+}
+.login .login_contain .content .line {
+  width: 0;
+  height: 270px;
+  margin-top: 60px;
+  border-right: 1px dashed #e5e5e5;
+  float: left;
+}
+.login .login_contain .content .r_p {
+  float: right;
+  width: 315px;
+  margin-top: 48px;
+  margin-right: 20px;
+}
+.login .login_contain .content .r_p div {
+  height: 296px;
+}
+.login .login_contain .content .r_p div .l_p_p {
+  font-size: 17px;
+  color: #333333;
+  text-align: left;
+  margin-bottom: 29px;
+}
+.login .login_contain .content .r_p div .block {
+  width: 260px;
+  height: 44px;
+  border: 1px solid #dadada;
+  position: relative;
+  margin-bottom: 15px;
+}
+.login .login_contain .content .r_p div .block .ipt_c_ap {
+  height: 24px;
+  position: relative;
+  background: url(https://sso.woniu.com/images/login/ipt_bg.gif) no-repeat 0 4px;
+  margin-left: 15px;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+.login .login_contain .content .r_p div .block .ipt_c_ap .ipt_placeholder {
+  display: block;
+  position: absolute;
+  top: 0;
+  color: #999999;
+  z-index: 1;
+}
+.login .login_contain .content .r_p div .block .ipt_c_ap .ipt {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+}
+.login .login_contain .content .r_p div .block .ipt_c_ap .ipt input {
+  width: 190px;
+  height: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  line-height: 20px;
+  font-size: 14px;
+  font-family: 微软雅黑;
+}
+.login .login_contain .content .r_p div .login_btn {
+  text-decoration: none;
+  display: block;
+  background-color: #ff7f00;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 21px;
+  width: 262px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  outline: none;
+}
+.login .login_contain .content .r_p .r_p_p {
+  font-size: 14px;
+  text-align: right;
+}
+.login .login_contain .content .r_p .r_p_p .org_link {
+  color: #ff860d;
+  text-decoration: none;
+}
+.login .login_contain .content .r_p .r_p_p .v_split {
+  color: #e4e4e4;
+}
+
+/*# sourceMappingURL=login.css.map */

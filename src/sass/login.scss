@@ -1,0 +1,237 @@
+@charset "utf-8";
+$bigwidth:100%;
+$mainwidth:1200px; //主内容宽
+$l-s:list-style; //去除列表符号
+$n:none;
+$b:block;
+$f:flex; //设置弹性盒
+$t-d:text-decoration; //去除a标签下划线
+$j-c:justify-content; //主轴的对齐方式
+$a-i:align-items; //侧轴的对齐方式
+$a-c:align-content; //行与行的排列方式
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin background-color ($value) {
+    background-color: $value;
+}
+
+@mixin borderstyle($style, $size, $color) {
+    border: $style $size $color;
+} //设置边框样式
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+} //定位左上
+@mixin positionright($value, $right, $bottom) {
+    position: $value;
+    right: $right;
+    bottom: $bottom;
+} //定位右下
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+// 遮罩层
+.mask {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background: #000;
+    opacity: 0.5;
+}
+
+// 登录框
+.login {
+    width: 704px;
+    height: 400px;
+    margin-left: -352px;
+    font-family: 微软雅黑;
+    @include positionleft(fixed, 50%, 50%);
+    margin-top: -200px;
+    // 上下边框
+    .abg {
+        width: 100%;
+        height: 8px;
+        background: #000;
+        opacity: 0.3;
+        overflow: hidden;
+        border: 0 none;
+    }
+    // 左右边框加登录框内容
+    .login_contain {
+        height: 384px;
+        position: relative;
+        // 左边框
+        .vbg {
+            height: 100%;
+            width: 8px;
+            background: #000;
+            opacity: 0.3;
+        }
+        // 右边框
+        .vbgflr {
+            height: 100%;
+            width: 8px;
+            background: #000;
+            opacity: 0.3;
+            float: right;
+        }
+        // 关闭
+        .close {
+            width: 20px;
+            height: 20px;
+            background: url(https://sso.woniu.com/images/login/close.gif)no-repeat;
+            position: absolute;
+            top: 10px;
+            right: 18px;
+            z-index: 99999;
+        }
+        // 登录框内容
+        .content {
+            position: absolute;
+            left: 8px;
+            right: 8px;
+            top: 0;
+            bottom: 0;
+            @include background-color(#fff);
+            // 登录框左部分
+            .l_p {
+                width: 280px;
+                float: left;
+                margin-top: 48px;
+                margin-left: 20px;
+                .l_p_p {
+                    font-size: 16px;
+                    color: #333333;
+                    text-align: center;
+                }
+                .qrcode {
+                    width: 132px;
+                    position: relative;
+                    @include borderstyle(1px, solid, #dedede);
+                    margin: 38px auto 18px;
+                    font-size: 0;
+                    .qrcode_img {
+                        width: 132px;
+                        height: 132px;
+                    }
+                }
+                .l_p_p_bg1 {
+                    height: 30px;
+                    line-height: 30px;
+                    color: #666;
+                    background: url(https://sso.woniu.com/images/login/rect.gif)no-repeat center center;
+                    font-size: 14px;
+                    text-align: center;
+                }
+                .l_p_b {
+                    font-size: 14px;
+                    color: #999;
+                    margin-top: 56px;
+                    .org_link {
+                        color: #ff860d;
+                        #{$t-d}: $n;
+                    }
+                }
+            }
+            // 分割线
+            .line {
+                width: 0;
+                height: 270px;
+                margin-top: 60px;
+                border-right: 1px dashed #e5e5e5;
+                float: left;
+            }
+            // 右部分
+            .r_p {
+                float: right;
+                width: 315px;
+                margin-top: 48px;
+                margin-right: 20px;
+                div {
+                    height: 296px;
+                    .l_p_p {
+                        font-size: 17px;
+                        color: #333333;
+                        text-align: left;
+                        margin-bottom: 29px;
+                    }
+                    // 账号和密码
+                    .block {
+                        width: 260px;
+                        height: 44px;
+                        @include borderstyle(1px, solid, #dadada);
+                        position: relative;
+                        margin-bottom: 15px;
+                        // 账号和密码的input
+                        .ipt_c_ap {
+                            height: 24px;
+                            position: relative;
+                            background: url(https://sso.woniu.com/images/login/ipt_bg.gif)no-repeat 0 4px;
+                            margin-left: 15px;
+                            margin-top: 10px;
+                            padding-left: 30px;
+                            .ipt_placeholder {
+                                @include display($b);
+                                position: absolute;
+                                top: 0;
+                                color: #999999;
+                                z-index: 1;
+                            }
+                            .ipt {
+                                position: absolute;
+                                z-index: 5;
+                                top: 0;
+                                input {
+                                    width: 190px;
+                                    height: 20px;
+                                    border: $n;
+                                    outline: $n;
+                                    background: $n;
+                                    line-height: 20px;
+                                    font-size: 14px;
+                                    font-family: 微软雅黑;
+                                }
+                            }
+                        }
+                    }
+                    // 登录
+                    .login_btn {
+                        #{$t-d}: $n;
+                        @include display($b);
+                        @include background-color(#ff7f00);
+                        color: #fff;
+                        font-size: 20px;
+                        margin-bottom: 21px;
+                        width: 262px;
+                        height: 44px;
+                        line-height: 44px;
+                        text-align: center;
+                        outline: $n;
+                    }
+                }
+                .r_p_p {
+                    font-size: 14px;
+                    text-align: right;
+                    .org_link {
+                        color: #ff860d;
+                        #{$t-d}: $n;
+                    }
+                    .v_split {
+                        color: #e4e4e4;
+                    }
+                }
+            }
+        }
+    }
+}

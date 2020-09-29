@@ -1,0 +1,368 @@
+@charset "utf-8";
+// $bigwidth:100%;
+// $mainwidth:1200px; //主内容宽
+// $l-s:list-style; //去除列表符号
+// $n:none;
+// $b:block;
+// $f:flex; //设置弹性盒
+// $t-d:text-decoration; //去除a标签下划线
+// $j-c:justify-content; //主轴的对齐方式
+// $a-i:align-items; //侧轴的对齐方式
+// $a-c:align-content; //行与行的排列方式
+// @mixin display($value) {
+//     display: $value;
+// }
+// @mixin background-color ($value) {
+//     background-color: $value;
+// }
+// @mixin borderstyle($style, $size, $color) {
+//     border: $style $size $color;
+// } //设置边框样式
+// @mixin positionleft($value, $left, $top) {
+//     position: $value;
+//     left: $left;
+//     top: $top;
+// } //定位左上
+// @mixin positionright($value, $right, $bottom) {
+//     position: $value;
+//     right: $right;
+//     bottom: $bottom;
+// } //定位右下
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+// html {
+//     position: relative;
+// }
+// 底部
+.footer {
+    width: $bigwidth;
+    height: 597.4px;
+    @include background-color(#fff);
+    overflow: hidden;
+    border-top: 1px solid #ebebeb;
+    // 底部主部分
+    .main_footer {
+        width: $mainwidth;
+        height: 491.4px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        // 保证部分
+        .pledge {
+            height: 102px;
+            @include background-color(#fff);
+            position: relative;
+            border-bottom: 1px solid #dedede;
+            .one_p {
+                font-size: 18px;
+                color: #333;
+                padding-left: 52px;
+                line-height: 102px;
+                @include positionleft(absolute, 20px, 0);
+                i {
+                    width: 42px;
+                    height: 42px;
+                    background: url(../img/图片.png) no-repeat;
+                    background-position: 0px -360px;
+                    @include positionleft(absolute, 0px, 30px);
+                }
+            }
+            .two_p {
+                font-size: 18px;
+                color: #333;
+                padding-left: 52px;
+                line-height: 102px;
+                @include positionleft(absolute, 380px, 0);
+                i {
+                    width: 42px;
+                    height: 42px;
+                    background: url(../img/图片.png) no-repeat;
+                    background-position: -43px -360px;
+                    @include positionleft(absolute, 0px, 30px);
+                }
+            }
+            .three_p {
+                font-size: 18px;
+                color: #333;
+                padding-left: 52px;
+                line-height: 102px;
+                @include positionleft(absolute, 693px, 0);
+                i {
+                    width: 42px;
+                    height: 42px;
+                    background: url(../img/图片.png) no-repeat;
+                    background-position: -43px -360px;
+                    @include positionleft(absolute, 0px, 30px);
+                }
+            }
+            .four_p {
+                font-size: 18px;
+                color: #333;
+                padding-left: 52px;
+                line-height: 102px;
+                @include positionleft(absolute, 1025px, 0);
+                i {
+                    width: 42px;
+                    height: 42px;
+                    background: url(../img/图片.png) no-repeat;
+                    background-position: -129px -360px;
+                    @include positionleft(absolute, 0px, 30px);
+                }
+            }
+        }
+        // 关于部分
+        .about {
+            height: 125.4px;
+            padding: 30px 0;
+            border-bottom: 1px solid #dedede;
+            .list {
+                width: 200px;
+                float: left;
+                #{$l-s}: $n;
+                p {
+                    color: #333;
+                    font-size: 16px;
+                    line-height: 1;
+                    margin-bottom: 14px;
+                }
+                ul {
+                    #{$l-s}: $n;
+                    li {
+                        margin-bottom: 10px;
+                        line-height: 1;
+                        a {
+                            color: #666;
+                            font-size: 14px;
+                            #{$t-d}: $n;
+                        }
+                        a:hover {
+                            color: #ff7f00;
+                        }
+                    }
+                }
+            }
+        }
+        // 荣誉部分
+        .honor {
+            height: 203px;
+            position: relative;
+            .a {
+                width: 100px;
+                @include positionleft(absolute, 0, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: 0 -178px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .b {
+                width: 90px;
+                @include positionleft(absolute, 138px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: -91px -178px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .c {
+                width: 90px;
+                @include positionleft(absolute, 276px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: -182px -178px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .d {
+                width: 144px;
+                @include positionleft(absolute, 389px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: -273px -178px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .e {
+                width: 90px;
+                @include positionleft(absolute, 552px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: -364px -178px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .f {
+                width: 125px;
+                @include positionleft(absolute, 673px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: 0px -269px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .g {
+                width: 90px;
+                @include positionleft(absolute, 828px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: -91px -269px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .h {
+                width: 90px;
+                @include positionleft(absolute, 966px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: -182px -269px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+            .i {
+                width: 115px;
+                @include positionleft(absolute, 1088px, 30px);
+                text-align: center;
+                i {
+                    width: 90px;
+                    height: 90px;
+                    @include display($b);
+                    margin: 0 auto;
+                    background: url(../img/图片.png)no-repeat;
+                    background-position: -273px -269px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    color: #999;
+                    font-size: 14px;
+                    line-height: 1;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    // 版权部分
+    .copyright {
+        padding: 30px 0;
+        @include background-color(#f7f7f7);
+        // 版权部分主部分
+        .main_copyright {
+            width: $mainwidth;
+            height: 45px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            // 备案信息图标
+            .putonrecords {
+                width: 108px;
+                height: 45px;
+                @include display($b);
+                background: url(../img/图片.png) -392px 0 no-repeat;
+                float: right;
+                margin-right: 20px;
+            }
+            div {
+                .copyright_p1 {
+                    font-size: 18px;
+                    color: #999;
+                    line-height: 24px;
+                    margin-bottom: 9px;
+                }
+                .copyright_p2 {
+                    font-size: 12px;
+                    color: #999;
+                    line-height: 1px;
+                }
+            }
+        }
+    }
+}

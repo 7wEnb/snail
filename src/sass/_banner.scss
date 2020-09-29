@@ -1,0 +1,267 @@
+@charset "utf-8";
+// $bigwidth:100%;
+// $mainwidth:1200px; //主内容宽
+// $l-s:list-style; //去除列表符号
+// $n:none;
+// $b:block;
+// $f:flex; //设置弹性盒
+// $t-d:text-decoration; //去除a标签下划线
+// $j-c:justify-content; //主轴的对齐方式
+// $a-i:align-items; //侧轴的对齐方式
+// $a-c:align-content; //行与行的排列方式
+// @mixin display($value) {
+//     display: $value;
+// }
+// @mixin background-color ($value) {
+//     background-color: $value;
+// }
+// @mixin borderstyle($style, $size, $color) {
+//     border: $style $size $color;
+// } //设置边框样式
+// @mixin positionleft($value, $left, $top) {
+//     position: $value;
+//     left: $left;
+//     top: $top;
+// } //定位左上
+// @mixin positionright($value, $right, $bottom) {
+//     position: $value;
+//     right: $right;
+//     bottom: $bottom;
+// } //定位右下
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+// html {
+//     position: relative;
+// }
+// 广告
+.banner {
+    width: $bigwidth;
+    height: 430px;
+    @include background-color(#f7f7f7);
+    margin: 0 auto;
+    z-index: -5555;
+    // 广告二级菜单
+    .main_banner {
+        width: $mainwidth;
+        margin: 0 auto;
+        // 二级菜单左部分
+        .left {
+            width: 230px;
+            height: 430px;
+            @include background-color(#323436);
+            float: left;
+            >li.active {
+                color: #000;
+                @include background-color(#fff);
+            }
+            li {
+                position: relative;
+                #{$l-s}: $n;
+                width: 230px;
+                height: 45px;
+                @include borderstyle(1px, solid, #323436);
+                a {
+                    width: 133px;
+                    height: 45px;
+                    margin-top: 1px;
+                    line-height: 45px;
+                    @include display(inline-block);
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    background: url(../img/右箭头.png)193px center no-repeat;
+                    color: #fff;
+                    font-size: 16px;
+                    padding: 0 40px 0 55px;
+                    #{$t-d}: $n;
+                    position: relative;
+                    vertical-align: baseline;
+                    .before_picture {
+                        width: 12px;
+                        height: 16px;
+                        @include display($b);
+                        vertical-align: baseline;
+                        font-size: 100%;
+                        white-space: nowrap;
+                    }
+                }
+                a:hover {
+                    color: #000;
+                }
+            }
+            li:hover {
+                @include borderstyle(1px, solid, #ff9500);
+                border-right: $n;
+            }
+            li:nth-of-type(1) .before_picture {
+                @include positionleft(absolute, 31px, 18px);
+                background: url(../img/图片.png)0 0 no-repeat;
+            }
+            li:nth-of-type(2) .before_picture {
+                @include positionleft(absolute, 31px, 18px);
+                background: url(../img/图片.png)0 -50px no-repeat;
+            }
+            li:nth-of-type(3) .before_picture {
+                width: 15px;
+                height: 15px;
+                @include positionleft(absolute, 29px, 18px);
+                background: url(../img/图片.png)0 -17px no-repeat;
+            }
+            li:nth-of-type(4) .before_picture {
+                @include positionleft(absolute, 31px, 18px);
+                background: url(../img/图片.png) 0 -33px no-repeat;
+            }
+            li:nth-of-type(5) .before_picture {
+                background: url(../img/图片.png) 0 -67px no-repeat;
+                @include positionleft(absolute, 31px, 18px);
+            }
+            li:nth-of-type(6) .before_picture {
+                width: 19px;
+                height: 16px;
+                @include positionleft(absolute, 28px, 16px);
+                background: url(../img/图片.png) 0 -84px no-repeat;
+            }
+            li:nth-of-type(7) .before_picture {
+                width: 16px;
+                @include positionleft(absolute, 28px, 18px);
+                background: url(../img/图片.png) 0 -101px no-repeat;
+            }
+            li:nth-of-type(8) .before_picture {
+                width: 16px;
+                @include positionleft(absolute, 28px, 18px);
+                background: url(../img/图片.png) 0 -118px no-repeat;
+            }
+            li:nth-of-type(9) .before_picture {
+                background: url(../img/图片.png) 0 -135px no-repeat;
+                @include positionleft(absolute, 31px, 18px);
+            }
+        }
+        // 二级菜单隐藏部分
+        .cartlist {
+            width: 236px;
+            height: 370px;
+            overflow: hidden;
+            padding: 29px 25px;
+            @include positionleft(absolute, 389px, 144px);
+            @include borderstyle(1px, solid, #ff9500);
+            border-left: $n;
+            @include background-color(#fff);
+            @include display($n);
+            z-index: 2;
+            float: left;
+            .item {
+                width: 186px;
+                height: 312px;
+                // overflow: hidden;
+                float: left;
+                @include background-color(#fff);
+                @include display($n);
+                // z-index: 2;
+                div {
+                    ul {
+                        float: left;
+                        margin-right: 10px;
+                        #{$l-s}: $n;
+                        li {
+                            margin-bottom: 20px;
+                            height: 40px;
+                            line-height: 40px;
+                            a {
+                                height: 40px;
+                                line-height: 40px;
+                                font-size: 14px;
+                                color: #333;
+                                padding: 0;
+                                width: 230px;
+                                #{$t-d}: $n;
+                                @include display(inline-block);
+                                img {
+                                    width: 40px;
+                                    height: 40px;
+                                    @include display($b);
+                                    float: left;
+                                    margin-right: 16px;
+                                    border: $n;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .item:nth-of-type(3) {
+                width: 500px;
+            }
+        }
+    } // 轮播图部分
+    .right {
+        float: left;
+        width: 970px;
+        height: 430px;
+        overflow: hidden;
+        position: relative;
+        ul {
+            height: 430px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            li {
+                float: left;
+                #{$l-s}: $n;
+                width: 970px;
+                height: 430px;
+                img {
+                    width: 970px;
+                    height: 430px;
+                    cursor: pointer;
+                }
+            }
+        }
+        // 左箭头
+        .leftarrows {
+            width: 46px;
+            height: 70px;
+            @include positionleft(absolute, 0, 50%);
+            margin-top: -35px;
+            background: url(../img/图片3.png)no-repeat;
+            background-position: 0 -279px;
+        }
+        .leftarrows:hover {
+            background-position: 0 -379px;
+            cursor: pointer;
+        }
+        // 右箭头
+        .rightarrows {
+            width: 46px;
+            height: 70px;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -35px;
+            background: url(../img/图片3.png)no-repeat;
+            background-position: 0 -479px;
+        }
+        .rightarrows:hover {
+            background-position: 0 -579px;
+            cursor: pointer;
+        }
+        // 圆点
+        .dot {
+            width: 200px;
+            @include positionleft(absolute, 428px, 388px);
+            a {
+                width: 12px;
+                height: 12px;
+                margin: 0 8px;
+                #{$t-d}: $n;
+                @include display($b);
+                float: left;
+                background: url(../img/图片3.png)no-repeat;
+                background-position: 0 -41px;
+            }
+            .select {
+                background-position: 0 -83px;
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+@charset "utf-8";
+// $bigwidth:100%;
+// $mainwidth:1200px; //主内容宽
+// $l-s:list-style; //去除列表符号
+// $n:none;
+// $b:block;
+// $f:flex; //设置弹性盒
+// $t-d:text-decoration; //去除a标签下划线
+// $j-c:justify-content; //主轴的对齐方式
+// $a-i:align-items; //侧轴的对齐方式
+// $a-c:align-content; //行与行的排列方式
+// @mixin display($value) {
+//     display: $value;
+// }
+// @mixin background-color ($value) {
+//     background-color: $value;
+// }
+// @mixin borderstyle($style, $size, $color) {
+//     border: $style $size $color;
+// } //设置边框样式
+// @mixin positionleft($value, $left, $top) {
+//     position: $value;
+//     left: $left;
+//     top: $top;
+// } //定位左上
+// @mixin positionright($value, $right, $bottom) {
+//     position: $value;
+//     right: $right;
+//     bottom: $bottom;
+// } //定位右下
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+// html {
+//     position: relative;
+// }
+// 人气单品
+.rqdp {
+    width: $bigwidth;
+    height: 225px;
+    background-color: white;
+    // 人气单品主部分
+    .main_rqdp {
+        width: $mainwidth;
+        height: 234px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding-top: 20px;
+        position: relative;
+        // 第一部分
+        .one {
+            width: 260px;
+            float: left;
+            font-size: 16px;
+            text-align: center;
+            @include display($b);
+            img {
+                width: 164px;
+                height: 164px;
+                border: $n;
+                font-size: 100%;
+                cursor: pointer;
+            }
+            .one_name {
+                color: #000;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .one_name:hover {
+                color: #f86a00;
+                cursor: pointer;
+            }
+            .one_price {
+                color: #f86a00;
+                text-align: center;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+        }
+        // 第二部分
+        .two {
+            width: 260px;
+            float: left;
+            font-size: 16px;
+            text-align: center;
+            @include display($b);
+            img {
+                width: 164px;
+                height: 164px;
+                border: $n;
+                font-size: 100%;
+                cursor: pointer;
+            }
+            .two_name {
+                color: #000;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .two_name:hover {
+                color: #f86a00;
+                cursor: pointer;
+            }
+            .two_price {
+                color: #f86a00;
+                text-align: center;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+        }
+        // 第三部分
+        .three {
+            width: 260px;
+            float: left;
+            font-size: 16px;
+            text-align: center;
+            @include display($b);
+            img {
+                width: 164px;
+                height: 164px;
+                border: $n;
+                font-size: 100%;
+                cursor: pointer;
+            }
+            .three_name {
+                color: #000;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .three_name:hover {
+                color: #f86a00;
+                cursor: pointer;
+            }
+            .three_price {
+                color: #f86a00;
+                text-align: center;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+        }
+        // 第四部分
+        .four {
+            width: 260px;
+            float: left;
+            font-size: 16px;
+            text-align: center;
+            @include display($b);
+            img {
+                width: 164px;
+                height: 164px;
+                border: $n;
+                font-size: 100%;
+                cursor: pointer;
+            }
+            .four_name {
+                color: #000;
+                text-align: center;
+                padding-top: 10px;
+            }
+            .four_name:hover {
+                color: #f86a00;
+                cursor: pointer;
+            }
+            .four_price {
+                color: #f86a00;
+                text-align: center;
+                font-size: 100%;
+                vertical-align: baseline;
+            }
+        }
+        // 第五部分
+        .five {
+            width: 157px;
+            height: 254px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            img {
+                border: $n;
+                cursor: pointer;
+                font-size: 100%;
+            }
+            span {
+                color: #fff;
+                font-size: 26px;
+                position: absolute;
+                line-height: 1.4;
+                right: 70px;
+                top: 30px;
+                vertical-align: baseline;
+            }
+        }
+    }
+}

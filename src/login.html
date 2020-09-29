@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="script/require.js" data-main="script/main.js" defer async="true" id="currentpage" data-page="login_module"></script>
+</head>
+
+<body>
+    这里就是登录页面
+    <!-- 遮罩层 -->
+    <div class="mask"></div>
+    <!-- 登录框 -->
+    <div class="login">
+        <form id="Login" action="" method="POST">
+            <!--上边框-->
+            <div class="abg"></div>
+            <!-- 左右边框加登录框内容 -->
+            <div class="login_contain">
+                <!-- 右边框 -->
+                <div class="vbgflr"></div>
+                <!-- 左边框 -->
+                <div class="vbg"></div>
+                <!-- 关闭X -->
+                <a href="javascrip:; " class="close"></a>
+                <!--  登录框内容 -->
+                <div class="content">
+                    <!-- 登录框左部分 -->
+                    <div class="l_p">
+                        <p class="l_p_p">扫二维码安全登录</p>
+                        <div class="qrcode"><img class="qrcode_img" src="https://sso.woniu.com/barCode2D?action=1601299508775" alt=""></div>
+
+                        <p class="l_p_p_bg1">使用蜗牛盾扫描二维码</p>
+                        <p class="l_p_b">使用蜗牛盾，安全无忧！
+                            <a href="JavaScript:;" class="org_link">详情 ></a>
+                        </p>
+                    </div>
+                    <!-- 右部分 -->
+                    <div class="r_p">
+                        <!-- 登录部分 -->
+                        <div>
+                            <p class="l_p_p">账号登录</p>
+                            <div class="block">
+                                <div class="ipt_c_ap">
+                                    <div class="ipt_placeholder">蜗牛通行证/免卡号码</div>
+                                    <div class="ipt">
+                                        <input id="username" name="username" value size="25" maxlength="32" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block">
+                                <div class="ipt_c_ap">
+                                    <div class="ipt_placeholder">密码</div>
+                                    <div class="ipt">
+                                        <input id="password" name="password" value size="25" maxlength="32" type="password">
+                                    </div>
+                                </div>
+                            </div>
+                            <a id="" class="login_btn" href="JavaScript:;">登录</a>
+                        </div>
+                        <!-- 忘记密码部分 -->
+                        <div class="r_p_p">
+                            <a href="JavaScript:;" class="org_link">忘记密码</a>
+                            <span class="v_split">|</span>
+                            <a href="JavaScript:;" class="org_link">注册</a>
+                            <span class="v_split">|</span>
+                            <a href="JavaScript:;" class="org_link">帮助</a>
+                        </div>
+                    </div>
+                    <!-- 分割线 -->
+                    <div class="line"></div>
+                </div>
+            </div>
+            <!-- 下边框 -->
+            <div class="abg"></div>
+        </form>
+    </div>
+</body>
+
+</html>

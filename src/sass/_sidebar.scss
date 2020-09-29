@@ -1,0 +1,113 @@
+@charset "utf-8";
+// $bigwidth:100%;
+// $mainwidth:1200px; //主内容宽
+// $l-s:list-style; //去除列表符号
+// $n:none;
+// $b:block;
+// $f:flex; //设置弹性盒
+// $t-d:text-decoration; //去除a标签下划线
+// $j-c:justify-content; //主轴的对齐方式
+// $a-i:align-items; //侧轴的对齐方式
+// $a-c:align-content; //行与行的排列方式
+// @mixin display($value) {
+//     display: $value;
+// }
+// @mixin background-color ($value) {
+//     background-color: $value;
+// }
+// @mixin borderstyle($style, $size, $color) {
+//     border: $style $size $color;
+// } //设置边框样式
+// @mixin positionleft($value, $left, $top) {
+//     position: $value;
+//     left: $left;
+//     top: $top;
+// } //定位左上
+// @mixin positionright($value, $right, $bottom) {
+//     position: $value;
+//     right: $right;
+//     bottom: $bottom;
+// } //定位右下
+// * {
+//     margin: 0;
+//     padding: 0;
+// }
+// html {
+//     position: relative;
+// }
+// 侧边栏
+.sidebar {
+    width: 45px;
+    height: 100%;
+    @include background-color(#e0e0e0);
+    @include positionright(fixed, 0, 0);
+    display: $n;
+    .forum {
+        width: 45px;
+        height: 75px;
+        background: url(../img/图片2.png)no-repeat;
+        position: absolute;
+        cursor: pointer;
+        top: 320px;
+        left: 0;
+        background-position: -55px -152px;
+    }
+    .service {
+        width: 45px;
+        height: 75px;
+        background: url(../img/图片2.png) no-repeat;
+        position: absolute;
+        cursor: pointer;
+        top: 395px;
+        left: 0;
+        background-position: -55px -304px;
+    }
+    .share {
+        width: 45px;
+        height: 75px;
+        background: url(../img/图片2.png)no-repeat;
+        position: absolute;
+        cursor: pointer;
+        bottom: 170px;
+        background-position: 0px -947px;
+    }
+    .feedback {
+        width: 45px;
+        height: 75px;
+        background: url(../img/图片2.png)no-repeat;
+        position: absolute;
+        cursor: pointer;
+        bottom: 95px;
+        right: 0;
+        background-position: -55px -456px;
+    }
+    .top {
+        width: 45px;
+        height: 75px;
+        background: url(../img/图片2.png)no-repeat;
+        position: absolute;
+        cursor: pointer;
+        bottom: 30px;
+        background-position: -55px -608px;
+    }
+    .forum:hover {
+        background: url(../img/图片2.png)no-repeat;
+        background-position: -55px -228px;
+    }
+    .service:hover {
+        background: url(../img/图片2.png)no-repeat;
+        background-position: -55px -380px;
+    }
+    .share:hover {
+        background: url(../img/图片2.png)no-repeat;
+        background-position: -55px -947px;
+    }
+    .feedback:hover {
+        background: url(../img/图片2.png)no-repeat;
+        background-position: -55px -532px;
+    }
+    .top:hover {
+        background: url(../img/图片2.png)no-repeat;
+        background-position: -55px -684px;
+    }
+}

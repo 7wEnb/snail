@@ -1,0 +1,215 @@
+@charset "utf-8";
+$bigwidth:100%;
+$mainwidth:1200px; //主内容宽
+$l-s:list-style; //去除列表符号
+$n:none;
+$b:block;
+$f:flex; //设置弹性盒
+$t-d:text-decoration; //去除a标签下划线
+$j-c:justify-content; //主轴的对齐方式
+$a-i:align-items; //侧轴的对齐方式
+$a-c:align-content; //行与行的排列方式
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin background-color ($value) {
+    background-color: $value;
+}
+
+@mixin borderstyle($style, $size, $color) {
+    border: $style $size $color;
+} //设置边框样式
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+} //定位左上
+@mixin positionright($value, $right, $bottom) {
+    position: $value;
+    right: $right;
+    bottom: $bottom;
+} //定位右下
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+// 头部
+.header {
+    width: $bigwidth;
+    height: 144px;
+    @include display($f);
+    flex-direction: column;
+    // 顶部应用栏
+    .topbar {
+        width: $bigwidth;
+        height: 44px;
+        @include display($f);
+        @include background-color(#323436);
+        flex-direction: row;
+        position: relative;
+        // 顶部主部分
+        .main_topbar {
+            width: $mainwidth;
+            height: 44px;
+            line-height: 44px;
+            @include display($f);
+            margin: 0 auto;
+            flex-direction: row;
+            position: relative;
+            // 主部分左
+            .topbar_left {
+                @include display($f);
+                flex-direction: row;
+                a {
+                    #{$t-d}: $n;
+                    color: #989898;
+                    padding: 0 18px;
+                }
+                a:hover {
+                    color: white;
+                }
+            }
+            // 主部分右
+            .topbar_right {
+                width: 154px;
+                margin-left: 10px;
+                @include background-color(#000);
+                @include display($f);
+                flex-direction: row;
+                #{$a-i}: center;
+                i {
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    width: 21px;
+                    height: 16px;
+                    @include display($b);
+                    background: url(../img/图片.png) -50px 0 no-repeat;
+                }
+                a {
+                    #{$t-d}: $n;
+                    color: #989898;
+                    span {
+                        color: orange;
+                    }
+                }
+                // 隐藏购物车内容
+                .yc_cart {
+                    width: 308px;
+                    height: 99px;
+                    @include borderstyle(1px, solid, #ff9500);
+                    border-top: 0;
+                    position: absolute;
+                    top: 44px;
+                    right: 15px;
+                    @include background-color(#fff);
+                    color: #333;
+                    font-size: 14px;
+                    line-height: 99px;
+                    text-align: center;
+                    @include display($n);
+                    a {
+                        color: #ffa012;
+                        #{$t-d}: $n;
+                    }
+                }
+            }
+            .topbar_right:hover {
+                border: 1px solid #ff9500;
+                border-bottom: 0;
+                @include background-color(#fff);
+                color: #333;
+                .yc_cart {
+                    @include display($b);
+                }
+            }
+        }
+    }
+    // 顶部导航栏
+    .topnav {
+        width: $bigwidth;
+        height: 100px;
+        @include display($f);
+        @include background-color(#fff);
+        flex-direction: row;
+        // 顶部导航栏主部分 
+        .main_topnav {
+            width: $mainwidth;
+            height: 100px;
+            line-height: 100px;
+            @include display($f);
+            margin: 0 auto;
+            flex-direction: row;
+            // 免商店logo
+            .logo {
+                @include display($f);
+                #{$a-i}: center;
+            }
+            .logo:hover {
+                cursor: pointer;
+            }
+            // 主部分的列表
+            .list {
+                width: 950px;
+                height: 100px;
+                @include display($f);
+                flex-direction: row;
+                padding-left: 110px;
+                li {
+                    width: 140px;
+                    height: 80px;
+                    line-height: 100px;
+                    #{$l-s}: $n;
+                    text-align: center;
+                    font-size: 20px;
+                }
+                li:hover {
+                    cursor: pointer;
+                    color: #ff7f00;
+                }
+            }
+        }
+    }
+    // 隐藏导航栏
+    .topyc {
+        width: $bigwidth;
+        @include background-color(#fff);
+        @include borderstyle(1px, solid, #dedede);
+        padding: 30px 0 26px;
+        @include positionleft(absolute, 0, 144px);
+        @include display($n);
+        z-index: 1;
+        ul {
+            width: $mainwidth;
+            margin: 0 auto;
+            position: relative;
+            z-index: 111;
+            padding-left: 100px;
+            li {
+                float: left;
+                margin-right: 70px;
+                #{$l-s}: $n;
+                a {
+                    #{$t-d}: $n;
+                    color: #333;
+                    img {
+                        width: 100px;
+                        height: 100px;
+                        @include display($b);
+                        .name {
+                            font-size: 14px;
+                            line-height: 1;
+                            margin-top: 10px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

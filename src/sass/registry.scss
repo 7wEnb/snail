@@ -1,0 +1,186 @@
+@charset "utf-8";
+$bigwidth:100%;
+$mainwidth:1200px; //主内容宽
+$l-s:list-style; //去除列表符号
+$n:none;
+$b:block;
+$f:flex; //设置弹性盒
+$t-d:text-decoration; //去除a标签下划线
+$j-c:justify-content; //主轴的对齐方式
+$a-i:align-items; //侧轴的对齐方式
+$a-c:align-content; //行与行的排列方式
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin background-color ($value) {
+    background-color: $value;
+}
+
+@mixin borderstyle($style, $size, $color) {
+    border: $style $size $color;
+} //设置边框样式
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+} //定位左上
+@mixin positionright($value, $right, $bottom) {
+    position: $value;
+    right: $right;
+    bottom: $bottom;
+} //定位右下
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+// 版芯
+main {
+    width: 1000px;
+    margin: 0 auto;
+    // logo部分
+    .logo {
+        margin: 24px 0 99px 0;
+        img {
+            @include display($b);
+            float: left;
+        }
+        span {
+            @include display(inline-block);
+            height: 51px;
+            color: #231815;
+            font-size: 20px;
+            line-height: 70px;
+            padding-left: 20px;
+        }
+    }
+    // 通行证部分
+    .permit {
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #222222;
+            text-align: center;
+            line-height: 1;
+            margin-bottom: 68px;
+        }
+        .login {
+            width: 300px;
+            margin-left: 348px;
+            position: relative;
+            span {
+                font-size: 17px;
+                color: #666666;
+            }
+            p {
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 14px;
+                color: #999999;
+                a {
+                    color: #fd8900;
+                    #{$t-d}: $n;
+                }
+            }
+        }
+    }
+    // 表单部分
+    .form_item {
+        width: 750px;
+        margin-left: 250px;
+        form {
+            margin: 0 auto;
+            .row {
+                height: 66px;
+                padding: 10px 0;
+                label {
+                    width: 98px;
+                    font-size: 14px;
+                    text-align: right;
+                    line-height: 46px;
+                    color: #333333;
+                    float: left;
+                }
+                .frame {
+                    width: 300px;
+                    height: 46px;
+                    float: left;
+                    position: relative;
+                    .found {
+                        width: 286px;
+                        height: 26px;
+                        line-height: 26px;
+                        font-size: 14px;
+                        @include positionleft(absolute, 0, 0);
+                        padding: 9px 6px;
+                        color: #ccc;
+                    }
+                }
+            }
+            .row_enroll {
+                width: 750px;
+                height: 70px;
+                input {
+                    width: 300px;
+                    height: 50px;
+                    border: 0 $n;
+                    margin-left: 98px;
+                    cursor: pointer;
+                    font-size: 20px;
+                    color: #fff;
+                    background: url(http://mall.snail.com/passport/register/images/submit.jpg) 0 0 repeat-x;
+                }
+            }
+        }
+    }
+}
+
+// 底部
+footer {
+    width: 100%;
+    height: 96.6px;
+    margin: 140px 0 60px 0;
+    border-top: 1px solid #e9e8e8;
+    padding-top: 40px;
+    text-align: center;
+    .about {
+        margin-left: -20px;
+        span {
+            padding: 0 20px;
+            font-size: 14px;
+            line-height: 1;
+            border-right: 1px solid #d3d3d3;
+            color: #666666;
+            @include display(inline-block);
+        }
+        span:nth-of-type(6) {
+            border-right: $n;
+        }
+        a {
+            width: 70px;
+            height: 24px;
+            line-height: 24px;
+            @include display(inline-block);
+            @include background-color(#ff860d);
+            border-radius: 2px;
+            margin-left: 5px;
+            color: #fff;
+            #{$t-d}: $n;
+            font-size: 14px;
+            position: relative;
+            top: -3px;
+        }
+    }
+    .copyright {
+        font-size: 14px;
+        color: #999999;
+        margin-top: 18px;
+        line-height: 1;
+    }
+}

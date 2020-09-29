@@ -1,0 +1,208 @@
+@charset "utf-8";
+$bigwidth:100%;
+$mainwidth:1200px; //主内容宽
+$l-s:list-style; //去除列表符号
+$n:none;
+$b:block;
+$f:flex; //设置弹性盒
+$t-d:text-decoration; //去除a标签下划线
+$j-c:justify-content; //主轴的对齐方式
+$a-i:align-items; //侧轴的对齐方式
+$a-c:align-content; //行与行的排列方式
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin background-color ($value) {
+    background-color: $value;
+}
+
+@mixin borderstyle($style, $size, $color) {
+    border: $style $size $color;
+} //设置边框样式
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+} //定位左上
+@mixin positionright($value, $right, $bottom) {
+    position: $value;
+    right: $right;
+    bottom: $bottom;
+} //定位右下
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+// nav
+.commodity_nav {
+    width: $bigwidth;
+    @include background-color(#ff7f00);
+    .nav_list {
+        width: $mainwidth;
+        height: 50px;
+        margin: 0 auto;
+        position: relative;
+        .nav_item {
+            width: 210px;
+            height: 50px;
+            float: left;
+            #{$l-s}: $n;
+            a {
+                @include display($b);
+                width: 246px;
+                height: 50px;
+                line-height: 50px;
+                color: #fff;
+                font-size: 18px;
+                #{$t-d}: $n;
+                text-align: center;
+            }
+        }
+        .nav_item:nth-of-type(2) {
+            @include background-color(#ffa21f);
+        }
+        .nav_item:hover {
+            @include background-color(#ffa21f);
+        }
+    }
+}
+
+// 全部商品
+.sale_all {
+    width: $mainwidth;
+    margin: 0 auto;
+    // 头
+    .sale_title {
+        height: 55px;
+        line-height: 55px;
+        color: #333;
+        h3 {
+            float: left;
+        }
+    }
+    // 升降按钮
+    button {
+        margin-bottom: 10px;
+    }
+    // 渲染列表页
+    .sale_allitems {
+        width: $mainwidth;
+        height: 1464px;
+        margin-top: 10px;
+        .sale_item {
+            width: 286px;
+            @include borderstyle(1px, solid, #e6e6e6);
+            @include background-color(#fff);
+            margin-bottom: 16px;
+            margin-right: 12px;
+            float: left;
+            a {
+                width: 286px;
+                height: 265px;
+                overflow: hidden;
+                @include display($b);
+                #{$t-d}: $n;
+                img {
+                    width: 265px;
+                    margin: 0 auto;
+                    @include display($b);
+                }
+                img:hover {
+                    transform: translateX(-8px);
+                    transition: .1s;
+                }
+            }
+            .sale_info {
+                height: 82px;
+                line-height: 82px;
+                border-top: 1px dashed #e6e6e6;
+                @include display($b);
+                padding: 0 20px;
+                .sale_name {
+                    width: 165px;
+                    color: #20232c;
+                    float: left;
+                    font-size: 16px;
+                    overflow: hidden;
+                }
+                .sale_price {
+                    font-size: 16px;
+                    float: right;
+                    color: #ff7f00;
+                }
+            }
+        }
+    }
+    // 分页
+    .pagelist {
+        clear: both;
+        width: 1170px;
+        margin: 0 auto;
+        text-align: right;
+        padding-right: 20px;
+        .m-style {
+            float: right;
+            text-align: center;
+            .active {
+                float: left;
+                margin: 0 5px;
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                @include background-color(#e91e63);
+                color: #fff;
+                font-size: 14px;
+                @include borderstyle(1px, solid, #e91e63);
+            }
+            a {
+                float: left;
+                margin: 0 5px;
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                @include background-color(#fff);
+                @include borderstyle(1px, solid, #ebebeb);
+                color: #bdbdbd;
+                font-size: 14px;
+                #{$t-d}: $n;
+            }
+            .next,
+            .prev {
+                font-family: "Simsun";
+                font-size: 16px;
+                font-weight: bold;
+                width: 80px;
+            }
+            input {
+                float: left;
+                margin: 0 5px;
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                text-align: center;
+                @include background-color(#fff);
+                @include borderstyle(1px, solid, #dbdbdb);
+                outline: $n;
+                color: #bdbdbd;
+                font-size: 14px;
+            }
+            .jump-btn {
+                float: left;
+                margin: 0 5px;
+                width: 38px;
+                height: 38px;
+                line-height: 38px;
+                @include background-color(#fff);
+                @include borderstyle(1px, solid, #dbdbdb);
+                color: #bdbdbd;
+                font-size: 14px;
+            }
+        }
+    }
+}

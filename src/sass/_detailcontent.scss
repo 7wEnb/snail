@@ -1,0 +1,270 @@
+@charset "utf-8";
+$bigwidth:100%;
+$mainwidth:1200px; //主内容宽
+$l-s:list-style; //去除列表符号
+$n:none;
+$b:block;
+$f:flex; //设置弹性盒
+$t-d:text-decoration; //去除a标签下划线
+$j-c:justify-content; //主轴的对齐方式
+$a-i:align-items; //侧轴的对齐方式
+$a-c:align-content; //行与行的排列方式
+@mixin display($value) {
+    display: $value;
+}
+
+@mixin background-color ($value) {
+    background-color: $value;
+}
+
+@mixin borderstyle($style, $size, $color) {
+    border: $style $size $color;
+} //设置边框样式
+@mixin positionleft($value, $left, $top) {
+    position: $value;
+    left: $left;
+    top: $top;
+} //定位左上
+@mixin positionright($value, $right, $bottom) {
+    position: $value;
+    right: $right;
+    bottom: $bottom;
+} //定位右下
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    position: relative;
+}
+
+// 中间集装箱
+.container {
+    width: 1010px;
+    overflow: hidden;
+    margin: 40px auto 100px;
+    // 集装箱左部分
+    .item_left {
+        width: 380px;
+        height: 470px;
+        @include borderstyle(1px, solid, #e6e6e6);
+        float: left;
+        padding: 10px 45px 0;
+        position: relative;
+        // 大图
+        .big_picture {
+            width: 380px;
+            height: 380px;
+            border: $n;
+            margin-bottom: 10px;
+            img {
+                width: 380px;
+                height: 380px;
+                border: $n;
+                @include display($b);
+            }
+        }
+        // 小图
+        .small_picture {
+            width: 380px;
+            height: 60px;
+            margin-bottom: 20px;
+            // 左箭头
+            .nav_left {
+                width: 15px;
+                height: 58px;
+                @include borderstyle(1px, solid, #e7e7e7);
+                @include background-color(#fff);
+                float: left;
+                #{$t-d}: $n;
+                margin-right: 4px;
+                em {
+                    @include display(inline-block);
+                    margin-left: -4px;
+                    border: 7px solid;
+                    margin-top: 22px;
+                    border-color: transparent #e7e7e7 transparent transparent;
+                    width: 0;
+                    height: 0;
+                }
+            }
+            // 小图片
+            .tablist {
+                width: 336px;
+                height: 60px;
+                float: left;
+                overflow: hidden;
+                position: relative;
+                ul {
+                    width: 138px;
+                    overflow: hidden;
+                    #{$l-s}: $n;
+                    position: absolute;
+                    li {
+                        width: 60px;
+                        height: 60px;
+                        margin-right: 9px;
+                        float: left;
+                        .cur {
+                            width: 56px;
+                            height: 56px;
+                            @include borderstyle(2px, solid, #ff910e);
+                            #{$t-d}: $n;
+                            @include display($b);
+                        }
+                        a {
+                            width: 56px;
+                            height: 56px;
+                            #{$t-d}: $n;
+                            @include display($b);
+                            img {
+                                width: 58px;
+                                @include display($b);
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            // 右箭头
+            .nav_right {
+                width: 15px;
+                height: 58px;
+                @include borderstyle(1px, solid, #e7e7e7);
+                @include background-color(#fff);
+                float: left;
+                margin-left: 5px;
+                #{$t-d}: $n;
+                em {
+                    @include display(inline-block);
+                    width: 0;
+                    height: 0;
+                    border: 7px solid;
+                    margin-top: 22px;
+                    margin-left: 5px;
+                    border-color: transparent transparent transparent #e7e7e7;
+                }
+            }
+        }
+    }
+    // 集装箱右部分
+    .item_right {
+        width: 510px;
+        float: right;
+        overflow: hidden;
+        // 题目栏 商品名称
+        .titlebar {
+            width: 510px;
+            height: 94px;
+            padding: 20px 0;
+            overflow: hidden;
+            border-bottom: 1px dashed #e6e6e6;
+            margin-bottom: 15px;
+            .title {
+                color: rgb(51, 51, 51);
+                font: bold 24px / 24px 微软雅黑;
+            }
+            .subtitle {
+                color: rgb(255, 155, 0);
+                margin-top: 5px;
+                font: 18px/24px 微软雅黑;
+            }
+        }
+        // 商品价格
+        .price {
+            width: 150px;
+            height: 24px;
+            font: 14px / 24px "å¾®è½¯é›…é»‘";
+            margin-bottom: 10px;
+            color: #666;
+            .label {
+                width: 70px;
+                color: #999;
+                float: left;
+                margin-right: 5px;
+            }
+            .sellprice {
+                width: 68px;
+                color: #e7242e;
+                float: left;
+                font: bold 24px / 24px "å¾®è½¯é›…é»‘";
+            }
+        }
+        // 购买数量
+        .buy {
+            width: 470px;
+            height: 28px;
+            margin-bottom: 20px;
+            .quantity {
+                width: 75px;
+                height: 28px;
+                line-height: 26px;
+                font-size: 14px;
+                color: #888888;
+                float: left;
+            }
+            .count {
+                width: 470px;
+                @include display($b);
+                .minus {
+                    width: 28px;
+                    height: 28px;
+                    @include display($b);
+                    float: left;
+                    cursor: pointer;
+                    background: url(../img/图片5.png)no-repeat 0 -98px;
+                }
+                .txt_count {
+                    width: 60px;
+                    height: 26px;
+                    line-height: 26px;
+                    float: left;
+                    border: $n;
+                    border-top: 1px solid #dddddd;
+                    border-bottom: 1px solid #dddddd;
+                    padding: 0 0 0 10px;
+                }
+                .add {
+                    width: 28px;
+                    height: 28px;
+                    @include display($b);
+                    float: left;
+                    cursor: pointer;
+                    background: url(../img/图片5.png) no-repeat -29px -98px;
+                    border-bottom: 1px dashed #e6e6e6;
+                }
+            }
+        }
+        // 分割线
+        .line {
+            margin-bottom: 20px;
+            width: auto;
+            height: 0;
+            border-top: 1px dashed #e6e6e6;
+        }
+        // 加入购物车
+        .cart_row {
+            width: 470px;
+            height: 48px;
+            // 立即购买
+            .buy_now {
+                width: 150px;
+                height: 48px;
+                float: left;
+                background: url(../img/图片6.png) no-repeat 0 -343px;
+                #{$t-d}: $n;
+                margin-right: 20px;
+            }
+            // 加入购物车
+            .to_cart {
+                width: 180px;
+                height: 48px;
+                float: left;
+                margin-right: 20px;
+                background: url(../img/图片6.png) no-repeat 0 -196px;
+                #{$t-d}: $n;
+            }
+        }
+    }
+}
