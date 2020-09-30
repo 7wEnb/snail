@@ -46,6 +46,7 @@ html {
     margin: 40px auto 100px;
     // 集装箱左部分
     .item_left {
+        background-color: #93827e22;
         width: 380px;
         height: 470px;
         @include borderstyle(1px, solid, #e6e6e6);
@@ -58,6 +59,7 @@ html {
             height: 380px;
             border: $n;
             margin-bottom: 10px;
+            border: 1px dashed #ccc;
             img {
                 width: 380px;
                 height: 380px;
@@ -113,16 +115,11 @@ html {
                             #{$t-d}: $n;
                             @include display($b);
                         }
-                        a {
-                            width: 56px;
-                            height: 56px;
-                            #{$t-d}: $n;
+                        img {
+                            width: 60px;
+                            height: 60px;
                             @include display($b);
-                            img {
-                                width: 58px;
-                                @include display($b);
-                                border: 0;
-                            }
+                            border: 0;
                         }
                     }
                 }
@@ -247,6 +244,7 @@ html {
         .cart_row {
             width: 470px;
             height: 48px;
+            margin-top: 70px;
             // 立即购买
             .buy_now {
                 width: 150px;

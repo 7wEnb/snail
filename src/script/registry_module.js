@@ -6,7 +6,7 @@ define([], function() {
             $user.on('blur', function() {
                 $.ajax({
                     type: 'post',
-                    url: 'http://192.168.13.28/Snail/php/snail.php',
+                    url: 'http://192.168.13.28/Snail/php/alldata.php',
                     data: {
                         username: $user.val()
                     }

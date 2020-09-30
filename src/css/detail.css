@@ -189,6 +189,7 @@ html {
   margin: 40px auto 100px;
 }
 .container .item_left {
+  background-color: #93827e22;
   width: 380px;
   height: 470px;
   border: 1px solid #e6e6e6;
@@ -201,6 +202,7 @@ html {
   height: 380px;
   border: none;
   margin-bottom: 10px;
+  border: 1px dashed #ccc;
 }
 .container .item_left .big_picture img {
   width: 380px;
@@ -257,14 +259,9 @@ html {
   text-decoration: none;
   display: block;
 }
-.container .item_left .small_picture .tablist ul li a {
-  width: 56px;
-  height: 56px;
-  text-decoration: none;
-  display: block;
-}
-.container .item_left .small_picture .tablist ul li a img {
-  width: 58px;
+.container .item_left .small_picture .tablist ul li img {
+  width: 60px;
+  height: 60px;
   display: block;
   border: 0;
 }
@@ -380,6 +377,7 @@ html {
 .container .item_right .cart_row {
   width: 470px;
   height: 48px;
+  margin-top: 70px;
 }
 .container .item_right .cart_row .buy_now {
   width: 150px;
