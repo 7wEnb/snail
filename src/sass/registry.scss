@@ -99,6 +99,7 @@ main {
             .row {
                 height: 66px;
                 padding: 10px 0;
+                position: relative;
                 label {
                     width: 98px;
                     font-size: 14px;
@@ -121,6 +122,43 @@ main {
                         padding: 9px 6px;
                         color: #ccc;
                     }
+                    .password {
+                        width: 286px;
+                        height: 26px;
+                        line-height: 26px;
+                        font-size: 14px;
+                        @include positionleft(absolute, 0, 0);
+                        padding: 9px 6px;
+                        color: #ccc;
+                    }
+                    .repass {
+                        width: 286px;
+                        height: 26px;
+                        line-height: 26px;
+                        font-size: 14px;
+                        @include positionleft(absolute, 0, 0);
+                        padding: 9px 6px;
+                        color: #ccc;
+                    }
+                }
+                .userSpan {
+                    position: absolute;
+                    left: 410px;
+                    top: 20px;
+                }
+                .passSpan {
+                    width: 133px;
+                    display: inline-block;
+                    position: absolute;
+                    left: 315px;
+                    top: 11px;
+                }
+                .repassSpan {
+                    width: 133px;
+                    display: inline-block;
+                    position: absolute;
+                    left: 315px;
+                    top: 11px;
                 }
             }
             .row_enroll {

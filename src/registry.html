@@ -30,34 +30,37 @@
         </div>
         <!-- 表单部分 -->
         <div class="form_item">
-            <form action="">
+            <form action="http://192.168.11.1/Snail/php/registry.php" method="post">
                 <div class="row">
                     <label class="label" for="username">创建账号：</label>
                     <!-- 外框 -->
                     <div class="frame">
                         <!-- 创建input -->
-                        <input class="found" type="text" id="name" name="username" maxlength="25"><span></span>
+                        <input class="found" type="text" id="name" name="username" maxlength="25" placeholder="6-25位字母数字或下划线组成">
                     </div>
-
+                    <span class="userSpan"></span>
                 </div>
                 <div class="row">
                     <label class="label" for="password">设置密码：</label>
                     <!-- 外框 -->
                     <div class="frame">
                         <!-- 创建input -->
-                        <input class="found" type="password" id="name" name="username" maxlength="25">
+                        <input class="password" type="password" placeholder="6-20个字符组成" id="name" name="password" maxlength="25">
+                        <span class="passSpan"></span>
                     </div>
                 </div>
-                <div class="row">
-                    <label class="label" for="password">确认密码：</label>
-                    <!-- 外框 -->
-                    <div class="frame">
-                        <!-- 创建input -->
-                        <input class="found" type="password" id="name" name="username" maxlength="25">
-                    </div>
-                </div>
+
+                <!-- <div class="row">
+                    <label class="label" for="password">确认密码：</label> -->
+                <!-- 外框 -->
+                <!-- <div class="frame"> -->
+                <!-- 创建input -->
+                <!-- <input class="repass" placeholder="确认密码" type="password" id="name" name="repass" maxlength="25">
+                        <span class="repassSpan"></span>
+                    </div> -->
+                <!-- </div> -->
                 <div class="row_enroll">
-                    <input type="submit" value="注     册">
+                    <input name="submit" class="submit" type="submit" value="注     册">
                 </div>
             </form>
         </div>

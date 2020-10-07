@@ -11,13 +11,16 @@ main {
   width: 1000px;
   margin: 0 auto;
 }
+
 main .logo {
   margin: 24px 0 99px 0;
 }
+
 main .logo img {
   display: block;
   float: left;
 }
+
 main .logo span {
   display: inline-block;
   height: 51px;
@@ -26,6 +29,7 @@ main .logo span {
   line-height: 70px;
   padding-left: 20px;
 }
+
 main .permit h3 {
   font-size: 24px;
   font-weight: bold;
@@ -34,15 +38,18 @@ main .permit h3 {
   line-height: 1;
   margin-bottom: 68px;
 }
+
 main .permit .login {
   width: 300px;
   margin-left: 348px;
   position: relative;
 }
+
 main .permit .login span {
   font-size: 17px;
   color: #666666;
 }
+
 main .permit .login p {
   position: absolute;
   right: 0;
@@ -50,21 +57,27 @@ main .permit .login p {
   font-size: 14px;
   color: #999999;
 }
+
 main .permit .login p a {
   color: #fd8900;
   text-decoration: none;
 }
+
 main .form_item {
   width: 750px;
   margin-left: 250px;
 }
+
 main .form_item form {
   margin: 0 auto;
 }
+
 main .form_item form .row {
   height: 66px;
   padding: 10px 0;
+  position: relative;
 }
+
 main .form_item form .row label {
   width: 98px;
   font-size: 14px;
@@ -73,12 +86,14 @@ main .form_item form .row label {
   color: #333333;
   float: left;
 }
+
 main .form_item form .row .frame {
   width: 300px;
   height: 46px;
   float: left;
   position: relative;
 }
+
 main .form_item form .row .frame .found {
   width: 286px;
   height: 26px;
@@ -90,10 +105,58 @@ main .form_item form .row .frame .found {
   padding: 9px 6px;
   color: #ccc;
 }
+
+main .form_item form .row .frame .password {
+  width: 286px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 9px 6px;
+  color: #ccc;
+}
+
+main .form_item form .row .frame .repass {
+  width: 286px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 9px 6px;
+  color: #ccc;
+}
+
+main .form_item form .row .userSpan {
+  position: absolute;
+  left: 410px;
+  top: 20px;
+}
+
+main .form_item form .row .passSpan {
+  width: 133px;
+  display: inline-block;
+  position: absolute;
+  left: 315px;
+  top: 11px;
+}
+
+main .form_item form .row .repassSpan {
+  width: 133px;
+  display: inline-block;
+  position: absolute;
+  left: 315px;
+  top: 11px;
+}
+
 main .form_item form .row_enroll {
   width: 750px;
   height: 70px;
 }
+
 main .form_item form .row_enroll input {
   width: 300px;
   height: 50px;
@@ -113,9 +176,11 @@ footer {
   padding-top: 40px;
   text-align: center;
 }
+
 footer .about {
   margin-left: -20px;
 }
+
 footer .about span {
   padding: 0 20px;
   font-size: 14px;
@@ -124,9 +189,11 @@ footer .about span {
   color: #666666;
   display: inline-block;
 }
+
 footer .about span:nth-of-type(6) {
   border-right: none;
 }
+
 footer .about a {
   width: 70px;
   height: 24px;
@@ -141,11 +208,11 @@ footer .about a {
   position: relative;
   top: -3px;
 }
+
 footer .copyright {
   font-size: 14px;
   color: #999999;
   margin-top: 18px;
   line-height: 1;
 }
-
 /*# sourceMappingURL=registry.css.map */

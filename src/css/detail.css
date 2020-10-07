@@ -11,46 +11,81 @@ html {
 .header {
   width: 100%;
   height: 144px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .header .topbar {
   width: 100%;
   height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #323436;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: relative;
 }
+
 .header .topbar .main_topbar {
   width: 1200px;
   height: 44px;
   line-height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: relative;
 }
+
 .header .topbar .main_topbar .topbar_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
 .header .topbar .main_topbar .topbar_left a {
   text-decoration: none;
   color: #989898;
   padding: 0 18px;
+  font-size: 15px;
 }
+
 .header .topbar .main_topbar .topbar_left a:hover {
   color: white;
 }
+
 .header .topbar .main_topbar .topbar_right {
   width: 154px;
   margin-left: 10px;
   background-color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header .topbar .main_topbar .topbar_right i {
   margin-right: 15px;
   margin-left: 15px;
@@ -59,13 +94,16 @@ html {
   display: block;
   background: url(../img/图片.png) -50px 0 no-repeat;
 }
+
 .header .topbar .main_topbar .topbar_right a {
   text-decoration: none;
   color: #989898;
 }
+
 .header .topbar .main_topbar .topbar_right a span {
   color: orange;
 }
+
 .header .topbar .main_topbar .topbar_right .yc_cart {
   width: 308px;
   height: 99px;
@@ -73,7 +111,7 @@ html {
   border-top: 0;
   position: absolute;
   top: 44px;
-  right: 15px;
+  right: 11px;
   background-color: #fff;
   color: #333;
   font-size: 14px;
@@ -81,48 +119,76 @@ html {
   text-align: center;
   display: none;
 }
+
 .header .topbar .main_topbar .topbar_right .yc_cart a {
   color: #ffa012;
   text-decoration: none;
 }
+
 .header .topbar .main_topbar .topbar_right:hover {
   border: 1px solid #ff9500;
   border-bottom: 0;
   background-color: #fff;
   color: #333;
 }
+
 .header .topbar .main_topbar .topbar_right:hover .yc_cart {
   display: block;
 }
+
 .header .topnav {
   width: 100%;
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-color: #fff;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
 .header .topnav .main_topnav {
   width: 1200px;
   height: 100px;
   line-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
+
 .header .topnav .main_topnav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header .topnav .main_topnav .logo:hover {
   cursor: pointer;
 }
+
 .header .topnav .main_topnav .list {
   width: 950px;
   height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding-left: 110px;
 }
+
 .header .topnav .main_topnav .list li {
   width: 140px;
   height: 80px;
@@ -131,10 +197,12 @@ html {
   text-align: center;
   font-size: 20px;
 }
+
 .header .topnav .main_topnav .list li:hover {
   cursor: pointer;
   color: #ff7f00;
 }
+
 .header .topyc {
   width: 100%;
   background-color: #fff;
@@ -146,6 +214,7 @@ html {
   display: none;
   z-index: 1;
 }
+
 .header .topyc ul {
   width: 1200px;
   margin: 0 auto;
@@ -153,20 +222,24 @@ html {
   z-index: 111;
   padding-left: 100px;
 }
+
 .header .topyc ul li {
   float: left;
   margin-right: 70px;
   list-style: none;
 }
+
 .header .topyc ul li a {
   text-decoration: none;
   color: #333;
 }
+
 .header .topyc ul li a img {
   width: 100px;
   height: 100px;
   display: block;
 }
+
 .header .topyc ul li a img .name {
   font-size: 14px;
   line-height: 1;
@@ -188,6 +261,7 @@ html {
   overflow: hidden;
   margin: 40px auto 100px;
 }
+
 .container .item_left {
   background-color: #93827e22;
   width: 380px;
@@ -197,6 +271,7 @@ html {
   padding: 10px 45px 0;
   position: relative;
 }
+
 .container .item_left .big_picture {
   width: 380px;
   height: 380px;
@@ -204,17 +279,20 @@ html {
   margin-bottom: 10px;
   border: 1px dashed #ccc;
 }
+
 .container .item_left .big_picture img {
   width: 380px;
   height: 380px;
   border: none;
   display: block;
 }
+
 .container .item_left .small_picture {
   width: 380px;
   height: 60px;
   margin-bottom: 20px;
 }
+
 .container .item_left .small_picture .nav_left {
   width: 15px;
   height: 58px;
@@ -224,6 +302,7 @@ html {
   text-decoration: none;
   margin-right: 4px;
 }
+
 .container .item_left .small_picture .nav_left em {
   display: inline-block;
   margin-left: -4px;
@@ -233,6 +312,7 @@ html {
   width: 0;
   height: 0;
 }
+
 .container .item_left .small_picture .tablist {
   width: 336px;
   height: 60px;
@@ -240,18 +320,21 @@ html {
   overflow: hidden;
   position: relative;
 }
+
 .container .item_left .small_picture .tablist ul {
   width: 138px;
   overflow: hidden;
   list-style: none;
   position: absolute;
 }
+
 .container .item_left .small_picture .tablist ul li {
   width: 60px;
   height: 60px;
   margin-right: 9px;
   float: left;
 }
+
 .container .item_left .small_picture .tablist ul li .cur {
   width: 56px;
   height: 56px;
@@ -259,12 +342,14 @@ html {
   text-decoration: none;
   display: block;
 }
+
 .container .item_left .small_picture .tablist ul li img {
   width: 60px;
   height: 60px;
   display: block;
   border: 0;
 }
+
 .container .item_left .small_picture .nav_right {
   width: 15px;
   height: 58px;
@@ -274,6 +359,7 @@ html {
   margin-left: 5px;
   text-decoration: none;
 }
+
 .container .item_left .small_picture .nav_right em {
   display: inline-block;
   width: 0;
@@ -283,11 +369,13 @@ html {
   margin-left: 5px;
   border-color: transparent transparent transparent #e7e7e7;
 }
+
 .container .item_right {
   width: 510px;
   float: right;
   overflow: hidden;
 }
+
 .container .item_right .titlebar {
   width: 510px;
   height: 94px;
@@ -296,15 +384,18 @@ html {
   border-bottom: 1px dashed #e6e6e6;
   margin-bottom: 15px;
 }
+
 .container .item_right .titlebar .title {
   color: #333333;
   font: bold 24px / 24px 微软雅黑;
 }
+
 .container .item_right .titlebar .subtitle {
   color: #ff9b00;
   margin-top: 5px;
   font: 18px/24px 微软雅黑;
 }
+
 .container .item_right .price {
   width: 150px;
   height: 24px;
@@ -312,23 +403,27 @@ html {
   margin-bottom: 10px;
   color: #666;
 }
+
 .container .item_right .price .label {
   width: 70px;
   color: #999;
   float: left;
   margin-right: 5px;
 }
+
 .container .item_right .price .sellprice {
   width: 68px;
   color: #e7242e;
   float: left;
   font: bold 24px / 24px "å¾®è½¯é›…é»‘";
 }
+
 .container .item_right .buy {
   width: 470px;
   height: 28px;
   margin-bottom: 20px;
 }
+
 .container .item_right .buy .quantity {
   width: 75px;
   height: 28px;
@@ -337,10 +432,12 @@ html {
   color: #888888;
   float: left;
 }
+
 .container .item_right .buy .count {
   width: 470px;
   display: block;
 }
+
 .container .item_right .buy .count .minus {
   width: 28px;
   height: 28px;
@@ -349,6 +446,7 @@ html {
   cursor: pointer;
   background: url(../img/图片5.png) no-repeat 0 -98px;
 }
+
 .container .item_right .buy .count .txt_count {
   width: 60px;
   height: 26px;
@@ -359,6 +457,7 @@ html {
   border-bottom: 1px solid #dddddd;
   padding: 0 0 0 10px;
 }
+
 .container .item_right .buy .count .add {
   width: 28px;
   height: 28px;
@@ -368,17 +467,20 @@ html {
   background: url(../img/图片5.png) no-repeat -29px -98px;
   border-bottom: 1px dashed #e6e6e6;
 }
+
 .container .item_right .line {
   margin-bottom: 20px;
   width: auto;
   height: 0;
   border-top: 1px dashed #e6e6e6;
 }
+
 .container .item_right .cart_row {
   width: 470px;
   height: 48px;
   margin-top: 70px;
 }
+
 .container .item_right .cart_row .buy_now {
   width: 150px;
   height: 48px;
@@ -387,6 +489,7 @@ html {
   text-decoration: none;
   margin-right: 20px;
 }
+
 .container .item_right .cart_row .to_cart {
   width: 180px;
   height: 48px;
@@ -403,6 +506,7 @@ html {
   overflow: hidden;
   border-top: 1px solid #ebebeb;
 }
+
 .footer .main_footer {
   width: 1200px;
   height: 491.4px;
@@ -410,12 +514,14 @@ html {
   position: relative;
   overflow: hidden;
 }
+
 .footer .main_footer .pledge {
   height: 102px;
   background-color: #fff;
   position: relative;
   border-bottom: 1px solid #dedede;
 }
+
 .footer .main_footer .pledge .one_p {
   font-size: 18px;
   color: #333;
@@ -425,6 +531,7 @@ html {
   left: 20px;
   top: 0;
 }
+
 .footer .main_footer .pledge .one_p i {
   width: 42px;
   height: 42px;
@@ -434,6 +541,7 @@ html {
   left: 0px;
   top: 30px;
 }
+
 .footer .main_footer .pledge .two_p {
   font-size: 18px;
   color: #333;
@@ -443,6 +551,7 @@ html {
   left: 380px;
   top: 0;
 }
+
 .footer .main_footer .pledge .two_p i {
   width: 42px;
   height: 42px;
@@ -452,6 +561,7 @@ html {
   left: 0px;
   top: 30px;
 }
+
 .footer .main_footer .pledge .three_p {
   font-size: 18px;
   color: #333;
@@ -461,6 +571,7 @@ html {
   left: 693px;
   top: 0;
 }
+
 .footer .main_footer .pledge .three_p i {
   width: 42px;
   height: 42px;
@@ -470,6 +581,7 @@ html {
   left: 0px;
   top: 30px;
 }
+
 .footer .main_footer .pledge .four_p {
   font-size: 18px;
   color: #333;
@@ -479,6 +591,7 @@ html {
   left: 1025px;
   top: 0;
 }
+
 .footer .main_footer .pledge .four_p i {
   width: 42px;
   height: 42px;
@@ -488,41 +601,50 @@ html {
   left: 0px;
   top: 30px;
 }
+
 .footer .main_footer .about {
   height: 125.4px;
   padding: 30px 0;
   border-bottom: 1px solid #dedede;
 }
+
 .footer .main_footer .about .list {
   width: 200px;
   float: left;
   list-style: none;
 }
+
 .footer .main_footer .about .list p {
   color: #333;
   font-size: 16px;
   line-height: 1;
   margin-bottom: 14px;
 }
+
 .footer .main_footer .about .list ul {
   list-style: none;
 }
+
 .footer .main_footer .about .list ul li {
   margin-bottom: 10px;
   line-height: 1;
 }
+
 .footer .main_footer .about .list ul li a {
   color: #666;
   font-size: 14px;
   text-decoration: none;
 }
+
 .footer .main_footer .about .list ul li a:hover {
   color: #ff7f00;
 }
+
 .footer .main_footer .honor {
   height: 203px;
   position: relative;
 }
+
 .footer .main_footer .honor .a {
   width: 100px;
   position: absolute;
@@ -530,6 +652,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .a i {
   width: 90px;
   height: 90px;
@@ -539,12 +662,14 @@ html {
   background-position: 0 -178px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .a p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .b {
   width: 90px;
   position: absolute;
@@ -552,6 +677,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .b i {
   width: 90px;
   height: 90px;
@@ -561,12 +687,14 @@ html {
   background-position: -91px -178px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .b p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .c {
   width: 90px;
   position: absolute;
@@ -574,6 +702,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .c i {
   width: 90px;
   height: 90px;
@@ -583,12 +712,14 @@ html {
   background-position: -182px -178px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .c p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .d {
   width: 144px;
   position: absolute;
@@ -596,6 +727,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .d i {
   width: 90px;
   height: 90px;
@@ -605,12 +737,14 @@ html {
   background-position: -273px -178px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .d p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .e {
   width: 90px;
   position: absolute;
@@ -618,6 +752,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .e i {
   width: 90px;
   height: 90px;
@@ -627,12 +762,14 @@ html {
   background-position: -364px -178px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .e p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .f {
   width: 125px;
   position: absolute;
@@ -640,6 +777,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .f i {
   width: 90px;
   height: 90px;
@@ -649,12 +787,14 @@ html {
   background-position: 0px -269px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .f p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .g {
   width: 90px;
   position: absolute;
@@ -662,6 +802,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .g i {
   width: 90px;
   height: 90px;
@@ -671,12 +812,14 @@ html {
   background-position: -91px -269px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .g p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .h {
   width: 90px;
   position: absolute;
@@ -684,6 +827,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .h i {
   width: 90px;
   height: 90px;
@@ -693,12 +837,14 @@ html {
   background-position: -182px -269px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .h p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .main_footer .honor .i {
   width: 115px;
   position: absolute;
@@ -706,6 +852,7 @@ html {
   top: 30px;
   text-align: center;
 }
+
 .footer .main_footer .honor .i i {
   width: 90px;
   height: 90px;
@@ -715,16 +862,19 @@ html {
   background-position: -273px -269px;
   margin-bottom: 20px;
 }
+
 .footer .main_footer .honor .i p {
   color: #999;
   font-size: 14px;
   line-height: 1;
   margin-bottom: 10px;
 }
+
 .footer .copyright {
   padding: 30px 0;
   background-color: #f7f7f7;
 }
+
 .footer .copyright .main_copyright {
   width: 1200px;
   height: 45px;
@@ -732,6 +882,7 @@ html {
   position: relative;
   overflow: hidden;
 }
+
 .footer .copyright .main_copyright .putonrecords {
   width: 108px;
   height: 45px;
@@ -740,16 +891,17 @@ html {
   float: right;
   margin-right: 20px;
 }
+
 .footer .copyright .main_copyright div .copyright_p1 {
   font-size: 18px;
   color: #999;
   line-height: 24px;
   margin-bottom: 9px;
 }
+
 .footer .copyright .main_copyright div .copyright_p2 {
   font-size: 12px;
   color: #999;
   line-height: 1px;
 }
-
 /*# sourceMappingURL=detail.css.map */

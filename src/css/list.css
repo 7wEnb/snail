@@ -39,6 +39,7 @@ html {
   text-decoration: none;
   color: #989898;
   padding: 0 18px;
+  font-size: 15px;
 }
 .header .topbar .main_topbar .topbar_left a:hover {
   color: white;
@@ -73,7 +74,7 @@ html {
   border-top: 0;
   position: absolute;
   top: 44px;
-  right: 15px;
+  right: 11px;
   background-color: #fff;
   color: #333;
   font-size: 14px;
